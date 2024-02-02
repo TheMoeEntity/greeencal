@@ -186,42 +186,6 @@ const Header = () => {
           <ul>
             <li>
               <Link href={"/"}> Home </Link>
-              <div className={styles.dropdn}>
-                <ul>
-                  <li className={styles.multiple}>
-                    Single Pages +
-                    <div className={styles.mores}>
-                      <ul>
-                        <li>Singin Out Loud</li>
-                        <li>Nothing can stop me</li>
-                        <li>Service Single 3</li>
-                        <li>Lorem Ipsum</li>
-                        <li>Dolor SIt </li>
-                        <li>Moses Pages</li>
-                        <li>Sex Playlist</li>
-                        <li>Bunch of words</li>
-                        <li>Sia is the greatest</li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li className={styles.multiple}>
-                    Multiple Pages +
-                    <div className={styles.mores}>
-                      <ul>
-                        <li>Services Style 1</li>
-                        <li>Services Style 2</li>
-                        <li>Service Single 3</li>
-                        <li>Lorem Ipsum</li>
-                        <li>Dolor SIt </li>
-                        <li>Moses Pages</li>
-                        <li>Sex Playlist</li>
-                        <li>Bunch of words</li>
-                        <li>Sia is the greatest</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li>About</li>
             <li>
@@ -265,9 +229,6 @@ const Header = () => {
           </ul>
         </div>
         <div className={styles.search}>
-          <div>
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </div>
           <div>{`LETS`} TALK</div>
         </div>
         <div onClick={show} className={styles.bars}>
