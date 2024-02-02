@@ -185,7 +185,7 @@ const Header = () => {
         <div className={styles.links}>
           <ul>
             <li>
-              <Link href={"/"}> Home + </Link>
+              <Link href={"/"}> Home </Link>
               <div className={styles.dropdn}>
                 <ul>
                   <li className={styles.multiple}>
