@@ -374,7 +374,11 @@
   .grid > div {
     margin: 30px 0;
   }
+  .aboutUs > div:nth-child(1) {
+    max-width: 400px;
+  }
 }
+
 @media screen and (max-width: 1211px) {
   .testimonialsGrid {
     justify-content: center;
@@ -387,9 +391,27 @@
     max-width: 60%;
   }
 }
+@media screen and (max-width: 982) {
+  .aboutUs > div:nth-child(2) {
+    width: calc(0.2 * 810px) !important;
+    height: calc(0.2 * 1080px) !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid > div {
+    margin: 30px 0;
+  }
+}
 @media screen and (max-width: 884px) {
   .testimonialsGrid > div {
     flex: 100%;
+  }
+  .aboutUs > div:nth-child(1) {
+    max-width: 100%;
+  }
+  .aboutUs {
+    padding: 20px 10px;
   }
   .testimonialsGrid > div {
     max-width: 80%;
@@ -397,6 +419,31 @@
   }
   .testimonialsGrid > div:nth-child(3) {
     max-width: 80%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .aboutUs {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutUs {
+    justify-content: center;
+  }
+  .title h2 {
+    font-size: 25px;
+  }
+  .grid > div {
+    margin: 30px 0;
+  }
+  .aboutUs > div:nth-child(2) {
+    margin-top: 40px;
+    width: calc(0.3 * 810px);
+    height: calc(0.3 * 1080px);
+    order: 1;
+  }
+  .aboutUs > div:nth-child(1) {
+    order: 2;
   }
 }
 @media screen and (max-width: 595px) {
@@ -409,19 +456,6 @@
     max-width: 95%;
   }
 }
-@media screen and (max-width: 900px) {
-  .grid > div {
-    margin: 30px 0;
-  }
-}
-@media screen and (max-width: 600px) {
-  .title h2 {
-    font-size: 25px;
-  }
-  .grid > div {
-    margin: 30px 0;
-  }
-}
 @media screen and (max-width: 420px) {
   .upcoming {
     height: 550px;
@@ -431,11 +465,5 @@
   }
   .upcoming .title p {
     width: 90%;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .aboutUs {
-    width: 100%;
   }
 }

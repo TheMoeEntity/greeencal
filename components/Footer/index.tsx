@@ -39,7 +39,7 @@ const Footer = () => {
             <div>
               <i className="fa-solid fa-location-dot"></i>
             </div>
-            <div>Ta-134/A, Gulshan Badda Link Rd, Dhaka</div>
+            <div>Nepa Junction, Mile 50, Abakaliki, Ebonyi, Nigeria</div>
           </div>
 
           <div>
@@ -52,7 +52,7 @@ const Footer = () => {
             <div style={{ width: "50px" }}>
               <i className="fa-solid fa-envelope"></i>
             </div>
-            <div>mosesnwigberi@gmail.com, moseschukwudinwigberi@gmail.com</div>
+            <div>info@greencal.com, info.greencal@yahoo.com</div>
           </div>
         </div>
         <div>
