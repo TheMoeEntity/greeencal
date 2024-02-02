@@ -30,7 +30,7 @@
   flex: 55%;
   color: black;
   padding: 80px 45px;
-  padding-top: 80px;
+  padding-top: 120px;
 }
 .left ul li {
   font-size: 13.5px;
@@ -81,7 +81,7 @@
 .right {
   flex: 45%;
   background-color: #00715d;
-  padding: 40px 45px;
+  padding: 70px 45px 40px 45px;
 }
 .right form {
   width: 95%;
@@ -639,6 +639,12 @@
   }
 }
 @media screen and (max-width: 470px) {
+  /* .left {
+    padding-top: 120px;
+  } */
+  .contactForm {
+    margin-top: 120px;
+  }
   .missionGrid {
     padding: 20px 10px;
   }

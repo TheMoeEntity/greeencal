@@ -3,9 +3,9 @@ const ContactPage = dynamic(() => import("../../components/ContactPage"));
 
 const Contact = () => {
   return (
-    <>
+    <div className="contactpage">
       <ContactPage />
-    </>
+    </div>
   );
 };
 

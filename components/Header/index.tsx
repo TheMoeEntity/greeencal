@@ -1,5 +1,6 @@
 import styles from "./index.module.css";
 import logo from "../../public/images/greencal_white.png";
+import logo2 from "../../public/images/greencal_logo.png";
 import Image from "next/image";
 import { useRef, useState, useEffect, CSSProperties } from "react";
 import Link from "next/link";
@@ -10,8 +11,6 @@ const Header = () => {
   const sideContent = useRef<HTMLDivElement | null>(null);
   const [sticky, setSticky] = useState("");
   const headerRef = useRef<HTMLDivElement | null>(null);
-  const more = useRef<HTMLLIElement | null>(null);
-  const inner = useRef<HTMLUListElement | null>(null);
   const pathname = usePathname();
   const showStyle = (): CSSProperties | {} => {
     const talkStyle: CSSProperties = {
@@ -61,25 +60,8 @@ const Header = () => {
     }, 400);
   };
 
-  const showMore = () => {
-    if (more.current) {
-      const elemHeight = more.current.scrollHeight;
-      const height = more.current.style.maxHeight;
-      more.current.style.maxHeight =
-        height === "" || height === "0px" ? `${elemHeight}px` : "0";
-    }
-  };
-  const innerAction = () => {
-    if (inner.current) {
-      const elemHeight = inner.current.scrollHeight;
-      const height = inner.current.style.maxHeight;
-      inner.current.style.maxHeight =
-        height === "" || height === "0px" ? `${elemHeight}px` : "0";
-    }
-  };
-
   return (
-    <div className={`${styles.header}`} style={showStyle()}>
+    <div className={`${styles.header}`}>
       <div
         style={{ right: sidebar ? "0%" : "-100%" }}
         className={styles.sidebar}
@@ -96,31 +78,11 @@ const Header = () => {
               </span>
             </li>
             <li>About</li>
-            <li onClick={showMore}>
+            <li>
               <span>Services</span>
               <span>
                 <i className="fa fa-plus"></i>
               </span>
-            </li>
-            <li ref={more} className={styles.more}>
-              <ul>
-                <li>Service Style 1</li>
-                <li>Service Style 2</li>
-                <li onClick={innerAction}>
-                  <span>Services Style 3</span>
-                  <span>
-                    <i className="fa fa-plus"></i>
-                  </span>
-                </li>
-                <ul ref={inner} className={styles.inner}>
-                  <li>General Construction</li>
-                  <li>Property Maintenance</li>
-                  <li>Preconstruction</li>
-                  <li>Virtual Design and Build</li>
-                  <li>Project management</li>
-                  <li>Design Build</li>
-                </ul>
-              </ul>
             </li>
             <li>
               <span>Pages</span>
@@ -170,7 +132,7 @@ const Header = () => {
         <div className={styles.logo}>
           <Link href={`/`}>
             <Image
-              src={logo}
+              src={pathname == "/contact" ? logo2 : logo}
               style={{
                 objectFit: "cover",
               }}
@@ -187,42 +149,15 @@ const Header = () => {
             <li>
               <Link href={"/"}> Home </Link>
             </li>
-            <li>About</li>
             <li>
-              Services +
-              <div className={styles.dropdn}>
-                <ul>
-                  <li>Donations</li>
-                  <li>Outreach</li>
-                  <li>Grants and Scholarships</li>
-                </ul>
-              </div>
+              <Link href={"/#about"}>About</Link>
             </li>
             <li>
-              Donations +
-              <div className={styles.dropdn}>
-                <ul>
-                  <li className={styles.multiple}>
-                    Team
-                    <div className={styles.mores}>
-                      <ul>
-                        <li>Team Style 1</li>
-                        <li>Team Style 2</li>
-                        <li>Team Style 3</li>
-                        <li>Team Style 4</li>
-                        <li>Team Style 5 </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>Projects</li>
-                  <li>Pricing Plan</li>
-                  <li>Faq</li>
-                  <li>Gallery</li>
-                  <li>Shop</li>
-                </ul>
-              </div>
+              <Link href={"/#services"}>Services</Link>
             </li>
-            <li>Blog </li>
+            <li>
+              <Link href={"/donations"}>Donations</Link>
+            </li>
             <li>
               <Link href={"/contact"}>Contact</Link>
             </li>

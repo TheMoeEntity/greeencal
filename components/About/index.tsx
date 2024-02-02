@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <div className={styles.about}>
+    <div id="services" className={styles.about}>
       <div className={styles.desc}>
         {assets.map((x, i) => (
           <div key={i} className={styles.Card}>
@@ -42,7 +42,7 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className={styles.aboutUs}>
+      <div id="about" className={styles.aboutUs}>
         <div>
           <h2>About Us</h2>
           <h1>We Are Best Charity Organization around.</h1>

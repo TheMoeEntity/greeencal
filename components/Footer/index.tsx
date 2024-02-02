@@ -81,22 +81,29 @@ const Footer = () => {
         <div>
           <ul>
             <li>
-              Home <i className="fas fa-circle"></i>
+              <Link href={"/"}>
+                Home <i className="fas fa-circle"></i>
+              </Link>
             </li>
             <li>
-              About <i className="fas fa-circle"></i>
+              <Link href={"/#about"}>
+                About <i className="fas fa-circle"></i>
+              </Link>
             </li>
             <li>
-              Services <i className="fas fa-circle"></i>
+              <Link href={"/#services"}>
+                Services <i className="fas fa-circle"></i>
+              </Link>
             </li>
             <li>
-              Donations <i className="fas fa-circle"></i>
+              <Link href={"/donations"}>
+                Donations <i className="fas fa-circle"></i>
+              </Link>
             </li>
             <li>
-              Blog <i className="fas fa-circle"></i>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
+              <Link href={"/contact"}>
+                Contact <i className="fas fa-circle"></i>
+              </Link>
             </li>
           </ul>
         </div>
