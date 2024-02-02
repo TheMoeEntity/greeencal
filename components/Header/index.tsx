@@ -24,13 +24,13 @@ const Header = () => {
 
     return pathname === "/contact" ? talkStyle : {};
   };
-  // useEffect(() => {
-  //   window.addEventListener("scroll", isSticky);
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", isSticky);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
 
   const isSticky = () => {
     const scrollTop = window.scrollY;
