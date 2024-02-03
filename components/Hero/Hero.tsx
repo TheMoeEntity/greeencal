@@ -54,9 +54,9 @@ function Hero() {
                   <h2>Charity is our priority</h2> <br />
                   <h1>Giving help To Those Who Need It.</h1>
                   <p>
-                    Involves donating {`one's`} body after death for medical
-                    research, education, or anatomical dissection. Body donation
-                    plays a crucial role in advancing medical science
+                    Empowering lives through compassionate giving. Join Greencal
+                    Foundation in making a positive impact in Abakaliki, Ebonyi
+                    State, Nigeria.
                   </p>
                   <br />
                   <div className={styles.book}>

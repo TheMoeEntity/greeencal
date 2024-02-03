@@ -7,6 +7,9 @@
   position: relative;
   min-height: 350px;
   overflow: hidden;
+  background-image: url("/images/footer-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 .overlay {

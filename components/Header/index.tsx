@@ -16,11 +16,12 @@ const Header = () => {
   const pathname = usePathname();
   const showStyle = (): CSSProperties | {} => {
     const talkStyle: CSSProperties = {
-      position: "relative",
-      backgroundColor: "rgba(0, 0, 0, 0.8) !important",
-      boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1) !important",
-      backdropFilter: " blur(5px) !important",
-      WebkitBackdropFilter: " blur(5px) !important",
+      // position: "relative",
+      // backgroundColor: "rgba(0, 0, 0, 0.8) !important",
+      // boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1) !important",
+      // backdropFilter: " blur(5px) !important",
+      // color: "#00715d !important",
+      // WebkitBackdropFilter: " blur(5px) !important",
     };
 
     return pathname === "/contact" ? talkStyle : {};
@@ -63,7 +64,7 @@ const Header = () => {
   };
 
   return (
-    <div className={`${styles.header}`}>
+    <div className={`${styles.header}`} style={showStyle()}>
       <div
         style={{ right: sidebar ? "0%" : "-100%" }}
         className={styles.sidebar}

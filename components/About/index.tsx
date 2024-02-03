@@ -4,18 +4,21 @@ import outreach from "../../public/images/card.jpg";
 import outreach2 from "../../public/images/outreach.jpg";
 
 const About = () => {
-  const assets: { title: string; icon: string }[] = [
+  const assets: { title: string; icon: string; text: string }[] = [
     {
       title: "Education & Food for Chidren",
-      icon: "fa-solid fa-user-tie",
+      icon: "fas fa-book-open",
+      text: "Empowering young minds with knowledge and nourishment for a brighter future.",
     },
     {
       title: "Outreach",
-      icon: "fa-solid fa-cart-plus",
+      icon: "fas fa-hands-helping",
+      text: "Extending a helping hand to communities through impactful outreach initiatives. ",
     },
     {
       title: "Grants and Scholarships",
-      icon: "fa-solid fa-clock-rotate-left",
+      icon: "fas fa-graduation-cap",
+      text: "Fueling dreams with opportunities through grants and scholarships for aspiring minds.",
     },
   ];
 
@@ -31,25 +34,26 @@ const About = () => {
               <h3>{x.title}</h3>
             </span>
             <span>
-              <p>
-                When deciding which charity to donate to, it important to do
-                your research.
-              </p>
+              <p>{x.text}</p>
             </span>
-            <span>
+            {/* <span>
               <b>More Details</b>
-            </span>
+            </span> */}
           </div>
         ))}
       </div>
       <div id="about" className={styles.aboutUs}>
         <div>
           <h2>About Us</h2>
-          <h1>We Are Best Charity Organization around.</h1>
+          <h1>
+            Empowering Lives, Building Futures: Greencal Foundation's Commitment
+            to Positive Change.
+          </h1>
           <p>
-            When deciding which charity to donate to, {`it's`} important to do
-            your search and find one that aligns with your values and interests.
-            Look for charities that are transparent preventable diseases,
+            At Greencal Foundation, {`we're`} passionate about transforming
+            lives in Abakaliki, Ebonyi State. With a focus on education, food
+            outreach, and scholarships, we strive to create a brighter future
+            for children, fostering a community of empowerment and growth.
           </p>
           <div className={styles.aboutList}>
             <div>
@@ -133,7 +137,7 @@ const About = () => {
                     10:30 AM
                   </span>
                 </div>
-                <p>We assure you that your donations will be used wisely</p>
+                <p>Educational Outreach at EBSU primary school</p>
                 <button>DONATE NOW</button>
               </div>
             </div>
