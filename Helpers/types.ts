@@ -52,3 +52,8 @@ export type blogType = {
     content: string[];
   }[];
 };
+export type linkType = {
+  name: string;
+  isActive: boolean;
+  href: string;
+};

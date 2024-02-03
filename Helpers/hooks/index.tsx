@@ -1,5 +1,7 @@
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { Helpers } from "..";
+import { linkType } from "../types";
 
 export const useResize = () => {
   const [val, setVal] = useState("");
@@ -47,4 +49,44 @@ export const useScrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return { scrollTop, scrollBtn, pathname };
+};
+export const useLinks = () => {
+  const router = useRouter();
+  const [links, setLinks] = useState<linkType[]>(Helpers.links);
+  const pathname = usePathname();
+  useEffect(() => {
+    console.log(pathname.slice(1, pathname.length));
+    setLinks((currLink) => {
+      const newLink = currLink.map((x) =>
+        x.href === pathname.slice(1, pathname.length)
+          ? {
+              ...x,
+              isActive: true,
+            }
+          : {
+              ...x,
+              isActive: false,
+            }
+      );
+      return newLink;
+    });
+  }, [pathname]);
+  const LinkAction = (page: string) => {
+    setLinks((currLink) => {
+      const newLink = currLink.map((x) =>
+        x.href === page
+          ? {
+              ...x,
+              isActive: true,
+            }
+          : {
+              ...x,
+              isActive: false,
+            }
+      );
+      return newLink;
+    });
+    router.push(`/${page}`);
+  };
+  return { links, LinkAction };
 };

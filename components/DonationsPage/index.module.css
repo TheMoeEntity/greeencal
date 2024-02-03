@@ -1,0 +1,138 @@
+.donations {
+  width: 100%;
+}
+.donations .hero {
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+.overlay {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=00715e&c2=a3cb63&gt=l&gd=dtl
+*/
+  background: #00715e51;
+  background: linear-gradient(135deg, #00715e82, #a3cb639c);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  z-index: 2;
+  /* background-color: red; */
+}
+.caption > div {
+  background: rgba(255, 255, 255, 0.19);
+  color: white;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+.caption i {
+  font-size: small;
+  color: white;
+}
+.caption h1 {
+  color: white;
+  margin-top: 20px;
+}
+.news {
+  width: 100%;
+  background-color: #ffff;
+  height: auto;
+}
+.title {
+  margin: 40px auto;
+  width: fit-content;
+  padding: 20px 15px;
+  text-align: center;
+}
+.title span {
+  font-weight: bolder;
+}
+.title h2 {
+  font-size: 35px;
+  margin-top: 20px;
+  line-height: 1.35;
+  margin-left: auto;
+  margin-right: auto;
+  color: #00715d;
+}
+.grid {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+.grid > div {
+  max-width: 370px;
+  min-width: 300px;
+  height: 490px;
+  margin: 10px 10px;
+  box-shadow: 5px 9px 15px 0 rgba(179, 179, 179, 0.2);
+  border-radius: 12px;
+  /* overflow: hidden; */
+}
+
+.grid > div .img {
+  width: 100%;
+  height: 55%;
+  position: relative;
+}
+.grid > div .capt {
+  width: 100%;
+  height: 45%;
+  padding: 10px 20px;
+}
+.date {
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #6c6c6c60;
+  justify-content: space-between;
+  align-items: center;
+}
+.tag {
+  position: absolute;
+  top: 10px;
+  z-index: 1111;
+  color: white;
+  padding: 10px 20px;
+  left: 10px;
+  border-radius: 9px;
+  background: #00715d;
+}
+.date i {
+  margin-right: 12px;
+  color: #00715d;
+}
+.grid > div p {
+  font-weight: bolder;
+  line-height: 1.6;
+  font-weight: bolder;
+  font-size: 19.5px;
+  padding: 0 1.5px;
+}
+.grid > div button {
+  background-color: #00715d;
+  color: white;
+  padding: 18px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}

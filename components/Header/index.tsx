@@ -5,9 +5,11 @@ import Image from "next/image";
 import { useRef, useState, useEffect, CSSProperties } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLinks } from "@/Helpers/hooks";
 
 const Header = () => {
   const [sidebar, setSideBar] = useState(false);
+  const { links, LinkAction } = useLinks();
   const sideContent = useRef<HTMLDivElement | null>(null);
   const [sticky, setSticky] = useState("");
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -72,25 +74,17 @@ const Header = () => {
           </div>
           <ul>
             <li>
-              <span>Home</span>
-              <span>
-                <i className="fa fa-plus"></i>
-              </span>
-            </li>
-            <li>About</li>
-            <li>
-              <span>Services</span>
-              <span>
-                <i className="fa fa-plus"></i>
-              </span>
+              <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <span>Pages</span>
-              <span>
-                <i className="fa fa-plus"></i>
-              </span>
+              <Link href={"/#about"}>About</Link>
             </li>
-            <li>Blog</li>
+            <li>
+              <Link href={"/#services"}>Services</Link>
+            </li>
+            <li>
+              <Link href={"/donations"}>Donations</Link>
+            </li>
             <li>
               <Link href={"/contact"}>Contact</Link>
             </li>
@@ -146,21 +140,15 @@ const Header = () => {
         </div>
         <div className={styles.links}>
           <ul>
-            <li>
-              <Link href={"/"}> Home </Link>
-            </li>
-            <li>
-              <Link href={"/#about"}>About</Link>
-            </li>
-            <li>
-              <Link href={"/#services"}>Services</Link>
-            </li>
-            <li>
-              <Link href={"/donations"}>Donations</Link>
-            </li>
-            <li>
-              <Link href={"/contact"}>Contact</Link>
-            </li>
+            {links.map((x, i) => (
+              <li
+                className={x.isActive ? styles.active : ""}
+                key={i}
+                onClick={() => LinkAction(x.href)}
+              >
+                {x.name}
+              </li>
+            ))}
           </ul>
         </div>
         <div className={styles.search}>

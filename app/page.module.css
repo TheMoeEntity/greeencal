@@ -333,22 +333,6 @@
   font-size: small;
   padding-top: 15px;
 }
-
-@media screen and (max-width: 1207px) {
-  .testimonialsGrid > div {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .grid > div {
-    width: 450px;
-    height: 500px;
-  }
-  .grid > div .img {
-    height: 220px;
-  }
-}
 .date i {
   margin-right: 12px;
   color: #00715d;
@@ -367,6 +351,23 @@
   margin-top: 20px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 1207px) {
+  .testimonialsGrid > div {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .grid > div {
+    width: 450px;
+    height: 500px;
+  }
+  .grid > div .img {
+    height: 220px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .grid {
     justify-content: space-around;
