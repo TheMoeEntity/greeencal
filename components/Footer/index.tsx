@@ -108,6 +108,19 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <div className={styles.credits}>
+        <p>
+          Designed and developed by{" "}
+          <a
+            target={`_blank`}
+            rel="noopener noreferrer"
+            href="https://github.com/TheMoeEntity"
+          >
+            Moses Nwigberi{" "}
+          </a>
+          - Freelance Web Developer
+        </p>
+      </div>
     </div>
   );
 };

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   keywords:
     "Greencal Foundation, charity, education, outreach, scholarships, Abakaliki, Ebonyi State, Nigeria",
   authors: [{ name: "Moses Chukwudi Nwigberi" }],
+  creator: "Moses Chukwudi Nwigberi",
+  applicationName: "Greencal Foundation",
 };
 
 export default function RootLayout({
