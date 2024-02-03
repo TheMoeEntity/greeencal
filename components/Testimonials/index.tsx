@@ -12,18 +12,21 @@ const Testimonials = () => {
   const testimonials: testimonials = [
     {
       img: outreach,
-      name: "Ansu Fati",
-      work: "Footballer, lagos",
+      name: "Chijioke Nwankwo",
+      work: "Software Engineer, Lagos, Nigeria",
+      text: "Greencal Foundation has been a beacon of hope for children in our community. Their dedication to education and scholarships is changing lives and shaping a brighter future.",
     },
     {
       img: outreach2,
-      name: "Tim Cook",
-      work: "Web Developer, USA",
+      name: "Funmilayo Adegoke",
+      work: "Nutristionist, Abuja, Nigeria",
+      text: "I've witnessed the impact of Greencal Foundation's food outreach programs. They not only provide nourishment but also promote a healthy community, ensuring no child goes to bed hungry.",
     },
     {
       img: outreach,
-      name: "Tasha Haddish",
-      work: "Food Critic, Abuja",
+      name: "Ibrahim Abdullahi",
+      work: "Education Advocate, Kano, Nigeria",
+      text: "As an education advocate, I applaud Greencal Foundation's commitment to empowering young minds. The scholarships offered are instrumental in bridging the gap and creating opportunities for deserving students.",
     },
   ];
   const images = [
@@ -76,11 +79,7 @@ const Testimonials = () => {
               <i className="fas fa-quote-left"></i>
             </div>
             <span>
-              <p>
-                &quot; Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis est ea omnis iure harum ratione aperiam fugiat at
-                consequuntur ipsam hic, totam dolore voluptas repellat? &quot;
-              </p>
+              <p>&quot; {x.text} &quot;</p>
             </span>
             <span>
               <i className="fa fa-star" aria-hidden="true"></i>

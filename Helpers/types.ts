@@ -9,6 +9,7 @@ export type testimonials = {
   img: StaticImageData;
   name: string;
   work: string;
+  text: string;
 }[];
 export type nominees = {
   title: string;

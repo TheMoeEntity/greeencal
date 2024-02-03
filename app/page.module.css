@@ -271,7 +271,7 @@
 }
 .quotes i {
   font-size: 30px;
-  color: orangered;
+  color: #00715d;
 }
 
 .testimonialsGrid p {
@@ -285,7 +285,7 @@
   margin: 9px 0;
 }
 .testimonialsGrid span i {
-  color: orange;
+  color: #a2ca62;
 }
 .food {
   position: absolute;
