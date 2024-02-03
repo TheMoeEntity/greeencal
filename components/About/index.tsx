@@ -46,8 +46,8 @@ const About = () => {
         <div>
           <h2>About Us</h2>
           <h1>
-            Empowering Lives, Building Futures: Greencal Foundation's Commitment
-            to Positive Change.
+            Empowering Lives, Building Futures: Greencal {`Foundation's`}
+            Commitment to Positive Change.
           </h1>
           <p>
             At Greencal Foundation, {`we're`} passionate about transforming
