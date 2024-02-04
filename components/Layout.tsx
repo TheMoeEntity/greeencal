@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       {children}
       {<Footer />}
       <div ref={scrollBtn} onClick={scrollTop} className="scrollTop">
-        <i className="fa-solid fa-caret-up"></i>
+        <i className="fa-solid fa-angle-up"></i>
       </div>
     </>
   );

@@ -99,11 +99,11 @@ body {
 .scrollTop {
   width: 40px;
   height: 40px;
-  background-color: #121214;
+  background-color: #00715d;
   position: fixed;
   bottom: -20px;
   opacity: 0;
-  border-radius: 50%;
+  border-radius: 6px;
   right: 10px;
   display: flex;
   justify-content: center;
@@ -116,7 +116,7 @@ body {
   color: #00d169;
 }
 .scrollTop i {
-  color: #00715d;
+  color: #fff;
   font-size: 25px;
 }
 a {

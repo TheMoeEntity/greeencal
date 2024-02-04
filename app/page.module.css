@@ -451,7 +451,7 @@
   .testimonialsGrid > div {
     max-width: 95%;
     margin: 15px 0;
-    max-height: 360px;
+    max-height: auto;
   }
   .testimonialsGrid > div:nth-child(3) {
     max-width: 95%;

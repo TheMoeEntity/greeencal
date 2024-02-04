@@ -58,29 +58,34 @@ const About = () => {
           <div className={styles.aboutList}>
             <div>
               <div>
-                <i className="fa-solid fa-user-tie"></i>
+                <i className="fas fa-donate"></i>
               </div>
               <div>
                 <div>
                   <b>Quick Fundraising</b>
                 </div>
                 <p>
-                  Fund programs that help children escape poverty providing
-                  vocational training.
+                  Join hands with us in making a difference! Our volunteer work
+                  embodies the spirit of community, kindness, and positive
+                  impact. Together, we contribute to meaningful projects,
+                  creating a brighter future for those in need.
                 </p>
               </div>
             </div>
             <div>
               <div>
-                <i className="fa-solid fa-user-tie"></i>
+                <i className="fas fa-hands-helping"></i>
               </div>
               <div>
                 <div>
                   <b>Volunteer</b>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quis, totam veritatis doloribus molestiae impedit commodi.
+                  Your support fuels our mission! By contributing to our
+                  fundraising efforts, you become a vital part of positive
+                  change. Every donation counts, bringing us one step closer to
+                  providing essential resources and support to those who need it
+                  most.
                 </p>
               </div>
             </div>
