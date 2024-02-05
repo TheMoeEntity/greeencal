@@ -101,30 +101,6 @@ const ContactPage = () => {
                 <option>Grants</option>
               </select>
             </div>
-            {/* <div className={styles.formGroup}>
-              <label htmlFor="">Industry:</label>
-              <select
-                className="custom-select"
-                style={{ width: "100%" }}
-                onChange={onOptionChangeHandler}
-              >
-                <option>--Choose--</option>
-                <option>Transportation </option>
-                <option>Real Estate </option>
-                <option>Government </option>
-                <option>Energy</option>
-                <option>Hospitality & Tourism</option>
-                <option>Health Care</option>
-                <option>Information Technology</option>
-                <option>Financial Services</option>
-                <option>Wholesale & Retail</option>
-                <option>Public Utilities</option>
-                <option>Construction</option>
-                <option>Manufacturing</option>
-                <option>Agriculture</option>
-                <option>Others</option>
-              </select>
-            </div> */}
             <div className={styles.formGroup}>
               <textarea
                 className={styles.textArea}
@@ -138,28 +114,6 @@ const ContactPage = () => {
                 rows={1}
               ></textarea>
             </div>
-            {/* <div className={styles.formGroup}>
-              <label htmlFor="">Attach File:</label>
-              <i onClick={openFiles} className="fas fa-file"></i>
-              {currFile}
-            </div> */}
-            {/* 
-            <input
-              onChange={(e) =>
-                Helpers.handleFileSelected(
-                  e,
-                  enqueueSnackbar,
-                  setSize,
-                  setUserFile,
-                  setCurrFile,
-                  size
-                )
-              }
-              type="file"
-              id="file"
-              ref={inputFile}
-              style={{ display: "none" }}
-            /> */}
 
             <div className={styles.formGroup}>
               <button type="submit">

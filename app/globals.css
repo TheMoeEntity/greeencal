@@ -221,8 +221,9 @@ input {
   outline: none;
   padding: 17px 0px;
   background: none;
+  font-size: medium;
   color: black;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid #6c6c6c;
 }
 
 .custom-select select {

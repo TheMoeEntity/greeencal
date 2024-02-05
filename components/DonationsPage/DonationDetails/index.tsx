@@ -71,6 +71,10 @@ const DonationsDetails = () => {
             <div className={styles.form}>
               <form>
                 <div className={styles.formGroup}>
+                  <label htmlFor="">Amount</label>
+                  <input type="number" name="" value={50000} />
+                </div>
+                <div className={styles.formGroup}>
                   <label htmlFor="">Full Name:</label>
                   <input type="text" name="" id="" />
                 </div>
@@ -81,6 +85,18 @@ const DonationsDetails = () => {
                 <div className={styles.formGroup}>
                   <label htmlFor="">Phone:</label>
                   <input type="text" name="" id="" />
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="">Select Category:</label>
+                  <select className="custom-select" style={{ width: "100%" }}>
+                    <option>--Choose--</option>
+                    <option>Donation</option>
+                    <option>Support</option>
+                    <option>Grants</option>
+                  </select>
+                </div>
+                <div className={styles.formGroup}>
+                  <button type="submit">DONATE NOW</button>
                 </div>
               </form>
             </div>
