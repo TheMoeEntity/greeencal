@@ -29,7 +29,7 @@
 .caption {
   position: absolute;
   bottom: 40px;
-  left: 30px;
+  left: 20px;
   z-index: 2;
   /* background-color: red; */
 }
@@ -138,4 +138,94 @@
   padding: 18px 20px;
   margin-top: 20px;
   font-weight: bold;
+}
+.donationDetails {
+  padding: 10px;
+  background-color: white;
+  padding-bottom: 70px;
+}
+.donationsGrid {
+  width: 90%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 40px auto 0 auto;
+}
+.donationsGrid > div {
+  flex: 1;
+  margin: 10px 25px;
+}
+.donationsGrid > div:first-child {
+  flex-grow: 2;
+  margin-left: 0;
+}
+.donationsGrid > div:nth-child(2) {
+  box-shadow: 5px 9px 15px 0 rgba(179, 179, 179, 0.2);
+  height: auto;
+  max-width: 350px;
+  margin-right: 0;
+}
+.donationsGrid > div:nth-child(2) .img {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.donationsGrid > div:nth-child(2) .details {
+  width: 100%;
+  padding: 20px 20px;
+}
+.donationsGrid > div:nth-child(2) .details p {
+  line-height: 1.4;
+  color: #6c6c6c;
+  font-size: small;
+  margin: 15px 0;
+}
+.donationsGrid > div:nth-child(2) .img img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.donationsGrid > div:nth-child(2) .details > div {
+  margin: 17px 0;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+.donationsGrid > div:nth-child(2) .details > div > div {
+  border-bottom: 0.5px solid #6c6c6c4d;
+  padding: 14px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  color: #6c6c6c;
+  justify-content: space-between;
+}
+.custom {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 30px;
+}
+.custom > div {
+  padding: 16px 14px;
+  border: 1px solid #6c6c6c4d;
+  color: #6c6c6c;
+  border-radius: 8px;
+  margin: 5px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .donationsGrid {
+    flex-flow: column wrap;
+    width: 95%;
+    max-width: 95%;
+  }
+  .donationsGrid > div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .donationsGrid > div:nth-child(2) .img {
+    height: 250px;
+  }
 }

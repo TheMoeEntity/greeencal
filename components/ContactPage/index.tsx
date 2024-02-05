@@ -79,23 +79,7 @@ const ContactPage = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <form
-          // onSubmit={(e) =>
-          //   Helpers.handleSubmit(
-          //     setStatus,
-          //     setUserFile,
-          //     setVal,
-          //     setCurrFile,
-          //     policyRef,
-          //     currFile,
-          //     val,
-          //     e,
-          //     userFile,
-          //     enqueueSnackbarx
-          //   )
-          // }
-          >
-            {/* <h1>Contact Details</h1> */}
+          <form>
             <div className={styles.formGroup}>
               <label htmlFor="">Full Name:</label>
               <input type="text" name="" id="" />

@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import { Gallery } from "react-grid-gallery";
 import outreach2 from "../../public/images/outreach.jpg";
+import Link from "next/link";
 
 const DonationsPage = () => {
   const images = [
@@ -91,7 +92,9 @@ const DonationsPage = () => {
                   </span>
                 </div>
                 <p>We assure you that your donations will be used wisely</p>
-                <button>DONATE NOW</button>
+                <Link href={"/donations/giving-to-the-poor"}>
+                  <button>DONATE NOW</button>
+                </Link>
               </div>
             </div>
           ))}
