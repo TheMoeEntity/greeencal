@@ -127,7 +127,7 @@ const Header = () => {
         <div className={styles.logo}>
           <Link href={`/`}>
             <Image
-              src={pathname == "/contact" ? logo2 : logo}
+              src={logo}
               style={{
                 objectFit: "cover",
               }}

@@ -1,10 +1,64 @@
 /* ////------------------------- CONTACT FORM ------------ //////// */
+.donations {
+  width: 100%;
+}
+.donations .hero {
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+  background-image: url("/images/footer-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.overlay {
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=00715e&c2=a3cb63&gt=l&gd=dtl
+*/
+  background: #00715e51;
+  background: linear-gradient(135deg, #00715e82, #a3cb639c);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  z-index: 2;
+  /* background-color: red; */
+}
+.caption > div {
+  background: rgba(255, 255, 255, 0.19);
+  color: white;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+.caption i {
+  font-size: small;
+  color: white;
+}
+.caption h1 {
+  color: white;
+  margin-top: 20px;
+}
+
 .textArea::-webkit-scrollbar,
 .textArea::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 .textArea::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+.container {
+  width: 100%;
 }
 .contactForm {
   width: 100%;
