@@ -1,5 +1,8 @@
 .main {
 }
+.main img {
+  object-fit: cover;
+}
 .about {
   background-color: white;
   padding: 20px 20px;

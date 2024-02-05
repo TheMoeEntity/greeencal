@@ -341,7 +341,8 @@
   }
   .bars i {
     font-size: 40px;
-    color: #00715d;
+    /* color: #00715d; */
+    color: white;
   }
 }
 @media screen and (max-width: 750px) {

@@ -2,50 +2,10 @@
 import Image from "next/image";
 import styles from "../index.module.css";
 import { Gallery } from "react-grid-gallery";
-import outreach2 from "../../../public/images/outreach.jpg";
-import Link from "next/link";
+import outreach2 from "../../../public/images/outreach3.jpg";
+import { Helpers } from "@/Helpers";
 
 const DonationsDetails = () => {
-  const images = [
-    {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      width: 320,
-      height: 174,
-      caption: "After Rain (Jeshu John - designerspics.com)",
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-      width: 320,
-      height: 212,
-      tags: [
-        { value: "Ocean", title: "Ocean" },
-        { value: "People", title: "People" },
-      ],
-      alt: "Boats (Jeshu John - designerspics.com)",
-    },
-    {
-      src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-      width: 320,
-      height: 212,
-    },
-    {
-      src: "https://borgenproject.org/wp-content/uploads/Charities-Operating-in-Nigeria-1030x690.jpg",
-      width: 320,
-      height: 212,
-      tags: [
-        { value: "Ocean", title: "Ocean" },
-        { value: "People", title: "People" },
-      ],
-      alt: "Boats (Jeshu John - designerspics.com)",
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-      width: 320,
-      height: 174,
-      caption: "After Rain (Jeshu John - designerspics.com)",
-    },
-  ];
-  const customDonations = ["₦40k", "₦100k", "₦30k", "₦60k"];
   return (
     <div className={styles.donations}>
       <div className={styles.hero}>
@@ -64,7 +24,7 @@ const DonationsDetails = () => {
           <div>
             <h2>SELECT YOUR DONATION</h2>
             <div className={styles.custom}>
-              {customDonations.map((x, i) => (
+              {Helpers.customDonations.map((x, i) => (
                 <div key={i}>{x}</div>
               ))}
             </div>
@@ -137,7 +97,7 @@ const DonationsDetails = () => {
           </div>
         </div>
       </div>
-      <Gallery images={images} />
+      <Gallery images={Helpers.images} />
     </div>
   );
 };
