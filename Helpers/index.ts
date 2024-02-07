@@ -1,10 +1,11 @@
 import { linkType, testimonials } from "./types";
 import outreach from "../public/images/card.jpg";
 import outreach2 from "../public/images/outreach.jpg";
+import { getDocuments } from "@/lib/firebase";
 
 export class Helpers {
   static customDonations = ["₦40k", "₦100k", "₦30k", "₦60k"];
-  static testimonials: testimonials = [
+  static testimonials: testimonials[] = [
     {
       img: outreach,
       name: "Chijioke Nwankwo",
@@ -96,4 +97,11 @@ export class Helpers {
       href: "contact",
     },
   ];
+  static getData = async () => {
+    try {
+      return await getDocuments();
+    } catch (error) {
+      return null;
+    }
+  };
 }

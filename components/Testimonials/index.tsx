@@ -5,14 +5,15 @@ import styles from "../../app/page.module.css";
 import Image from "next/image";
 import { Gallery } from "react-grid-gallery";
 import { Helpers } from "@/Helpers";
+import { testimonials } from "@/Helpers/types";
 
-const Testimonials = () => {
+const Testimonials = ({ testimonials }: any) => {
   return (
     <div className={styles.testimonials}>
       <h2>Testimonials</h2>
       <h1>What {`They’re`} Talking About Us</h1>
       <div className={styles.testimonialsGrid}>
-        {Helpers.testimonials.map((x, i) => (
+        {testimonials.map((x: testimonials, i: number) => (
           <div key={i}>
             <div className={styles.quotes}>
               <i className="fas fa-quote-left"></i>
@@ -31,7 +32,7 @@ const Testimonials = () => {
                 <div>
                   <Image
                     alt="food png"
-                    src={x.img}
+                    src={"/images" + x.img}
                     fill
                     style={{ objectFit: "cover" }}
                   />

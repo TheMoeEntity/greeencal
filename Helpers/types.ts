@@ -10,7 +10,7 @@ export type testimonials = {
   name: string;
   work: string;
   text: string;
-}[];
+};
 export type nominees = {
   title: string;
   isActive: boolean;

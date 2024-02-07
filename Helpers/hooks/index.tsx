@@ -90,3 +90,50 @@ export const useLinks = () => {
   };
   return { links, LinkAction };
 };
+export const useStickyNav = (isStickyClass: string) => {
+  const [sticky, setSticky] = useState("");
+  const headerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    if (headerRef.current) {
+      let number = headerRef.current.style.display === "" ? 120 : 175;
+      const stickyClass = scrollTop >= number ? isStickyClass : "";
+      setSticky(stickyClass);
+    }
+  };
+  return { sticky, headerRef };
+};
+export const useSideBar = () => {
+  const [sidebar, setSideBar] = useState(false);
+  const sideContent = useRef<HTMLDivElement | null>(null);
+
+  const show = () => {
+    setSideBar(true);
+    setTimeout(() => {
+      if (sideContent.current) {
+        sideContent.current.style.width = "70%";
+        sideContent.current.style.visibility = "visible";
+      }
+    }, 700);
+  };
+
+  const hide = () => {
+    setSideBar(false);
+    setTimeout(() => {
+      if (sideContent.current) {
+        sideContent.current.style.width = "0%";
+        sideContent.current.style.visibility = "hidden";
+      }
+    }, 400);
+  };
+  return { show, hide, sidebar, sideContent };
+};
