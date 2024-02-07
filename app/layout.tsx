@@ -25,13 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout>
-          {children}
-          <Script
-            src="https://kit.fontawesome.com/4ef8c63dd7.js"
-            crossOrigin="anonymous"
-          />
-        </Layout>
+        <Layout>{children}</Layout>
+        <Script
+          src="https://kit.fontawesome.com/4ef8c63dd7.js"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
