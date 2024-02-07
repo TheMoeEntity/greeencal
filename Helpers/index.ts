@@ -87,6 +87,11 @@ export class Helpers {
       href: "#services",
     },
     {
+      name: "Testimonials",
+      isActive: false,
+      href: "#testimonials",
+    },
+    {
       name: "Donations",
       isActive: false,
       href: "donations",

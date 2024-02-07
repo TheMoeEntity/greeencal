@@ -9,7 +9,7 @@ import { testimonials } from "@/Helpers/types";
 
 const Testimonials = ({ testimonials }: any) => {
   return (
-    <div className={styles.testimonials}>
+    <div id="testimonials" className={styles.testimonials}>
       <h2>Testimonials</h2>
       <h1>What {`They’re`} Talking About Us</h1>
       <div className={styles.testimonialsGrid}>
