@@ -30,6 +30,7 @@
   position: absolute;
   bottom: 40px;
   left: 20px;
+  max-width: 90%;
   z-index: 2;
   /* background-color: red; */
 }
@@ -47,6 +48,8 @@
 .caption h1 {
   color: white;
   margin-top: 20px;
+  font-size: 26px;
+  max-width: 100%;
 }
 .news {
   width: 100%;
@@ -165,6 +168,7 @@
   box-shadow: 5px 9px 15px 0 rgba(179, 179, 179, 0.2);
   height: auto;
   max-width: 350px;
+  min-width: 320px;
   margin-right: 0;
   height: fit-content;
 }
@@ -287,5 +291,16 @@
   .donationsGrid > div:first-child {
     padding-right: 10px;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .donationsGrid {
+    width: 100%;
+  }
+  .donationsGrid > div:nth-child(2) {
+    min-width: 100%;
+  }
+  .donationsGrid > div:nth-child(2) .img {
+    height: 220px;
   }
 }

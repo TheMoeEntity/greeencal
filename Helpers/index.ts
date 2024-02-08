@@ -119,6 +119,14 @@ export class Helpers {
       href: "contact",
     },
   ];
+  static getSingle = async (id: string) => {
+    const data = await this.getData("donations");
+    if (!data) return;
+    const single = data.find((x) => {
+      return x.slug == id;
+    });
+    return single;
+  };
   static getData = async (data: string) => {
     try {
       return await getDocuments(data);

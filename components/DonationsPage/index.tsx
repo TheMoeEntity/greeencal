@@ -5,8 +5,11 @@ import { Gallery } from "react-grid-gallery";
 import outreach2 from "../../public/images/outreach5.jpg";
 import Link from "next/link";
 import { Helpers } from "@/Helpers";
+import { donationType } from "@/Helpers/types";
+import { useRouter } from "next/navigation";
 
-const DonationsPage = () => {
+const DonationsPage = ({ donations }: { donations: donationType[] }) => {
+  const router = useRouter();
   return (
     <div className={styles.donations}>
       <div className={styles.hero}>
@@ -28,12 +31,12 @@ const DonationsPage = () => {
           <h2>Help & Donate To Us Now</h2>
         </div>
         <div className={styles.grid}>
-          {[...Array(6)].map((_x, i) => (
+          {donations.map((x, i) => (
             <div key={i}>
               <div className={styles.img}>
-                <div className={styles.tag}>Outreach</div>
+                <div className={styles.tag}>{x.tag}</div>
                 <Image
-                  src={outreach2}
+                  src={"/images" + x.img}
                   style={{ objectFit: "cover" }}
                   alt="Picture of our donations and outreach"
                   fill
@@ -46,17 +49,17 @@ const DonationsPage = () => {
                 <div className={styles.date}>
                   <span>
                     <i className="fa fa-calendar"></i>
-                    23 May, 2023
+                    {x.date}
                   </span>
                   <span>
                     <i className="fa fa-clock"></i>
-                    10:30 AM
+                    {x.time}
                   </span>
                 </div>
-                <p>We assure you that your donations will be used wisely</p>
-                <Link href={"/donations/giving-to-the-poor"}>
-                  <button>DONATE NOW</button>
-                </Link>
+                <p>{x.name}</p>
+                <button onClick={() => router.push("/donations/" + x.slug)}>
+                  DONATE NOW
+                </button>
               </div>
             </div>
           ))}

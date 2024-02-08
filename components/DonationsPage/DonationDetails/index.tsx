@@ -4,8 +4,15 @@ import styles from "../index.module.css";
 import { Gallery } from "react-grid-gallery";
 import outreach2 from "../../../public/images/outreach3.jpg";
 import { Helpers } from "@/Helpers";
+import { donationType } from "@/Helpers/types";
 
-const DonationsDetails = () => {
+const DonationsDetails = ({
+  slug,
+  data,
+}: {
+  slug: string;
+  data: donationType;
+}) => {
   return (
     <div className={styles.donations}>
       <div className={styles.hero}>
@@ -13,10 +20,11 @@ const DonationsDetails = () => {
         <div className={styles.caption}>
           <div>
             <h3>
-              Donations <i className="fa fa-angle-right"></i> Giving To The Poor
+              Donations <i className="fa fa-angle-right"></i>
+              {" " + slug}
             </h3>
           </div>
-          <h1>GIVING TO THE POOR</h1>
+          <h1>{slug.toUpperCase()}</h1>
         </div>
       </div>
       <div className={styles.donationDetails}>
@@ -64,7 +72,7 @@ const DonationsDetails = () => {
           <div>
             <div className={styles.img}>
               <Image
-                src={outreach2}
+                src={"/images" + data.img}
                 style={{ objectFit: "cover" }}
                 alt="Picture of selected donation"
                 fill
@@ -74,7 +82,7 @@ const DonationsDetails = () => {
               />
             </div>
             <div className={styles.details}>
-              <h2>Giving TO THE POOR</h2>
+              <h2>{data.name}</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Possimus voluptate adipisci fugiat odit pariatur veniam.

@@ -96,6 +96,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link href={"/#testimonials"}>
+                Testimonials <i className="fas fa-circle"></i>
+              </Link>
+            </li>
+            <li>
               <Link href={"/donations"}>
                 Donations <i className="fas fa-circle"></i>
               </Link>
