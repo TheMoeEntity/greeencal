@@ -31,7 +31,7 @@ const Testimonials = ({ testimonials }: any) => {
               <div className={styles.img}>
                 <div>
                   <Image
-                    alt="food png"
+                    alt="Picture of testifier"
                     src={"/images" + x.img}
                     fill
                     style={{ objectFit: "cover" }}
@@ -45,7 +45,7 @@ const Testimonials = ({ testimonials }: any) => {
             </span>
             <div className={styles.food}>
               <Image
-                alt="food png"
+                alt="Greencal foundation company logo"
                 src={greencal}
                 fill
                 style={{ objectFit: "cover" }}

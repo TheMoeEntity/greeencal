@@ -131,7 +131,7 @@ const Header = () => {
               style={{
                 objectFit: "cover",
               }}
-              alt="company logo"
+              alt="Greencal foundation company logo"
               fill
               quality={100}
               priority={true}

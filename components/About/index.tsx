@@ -1,4 +1,5 @@
 "use client";
+import { Helpers } from "@/Helpers";
 import { donationType } from "@/Helpers/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,28 +9,11 @@ import outreach2 from "../../public/images/outreach.jpg";
 
 const About = ({ donations }: any) => {
   const router = useRouter();
-  const assets: { title: string; icon: string; text: string }[] = [
-    {
-      title: "Education & Food for Children",
-      icon: "fas fa-book-open",
-      text: "Empowering young minds with knowledge and nourishment for a brighter future.",
-    },
-    {
-      title: "Outreach",
-      icon: "fas fa-hands-helping",
-      text: "Extending a helping hand to communities through impactful outreach initiatives. ",
-    },
-    {
-      title: "Grants and Scholarships",
-      icon: "fas fa-graduation-cap",
-      text: "Fueling dreams with opportunities through grants and scholarships for aspiring minds.",
-    },
-  ];
 
   return (
     <div id="services" className={styles.about}>
       <div className={styles.desc}>
-        {assets.map((x, i) => (
+        {Helpers.assets.map((x, i) => (
           <div key={i} className={styles.Card}>
             <span>
               <i className={x.icon} aria-hidden="true"></i>
@@ -102,7 +86,7 @@ const About = ({ donations }: any) => {
         <div>
           <Image
             src={outreach2}
-            alt="Hero Image"
+            alt="Kids in the classroom for the hero section"
             priority
             fill
             style={{
@@ -128,7 +112,7 @@ const About = ({ donations }: any) => {
                 <Image
                   src={"/images" + x.img}
                   style={{ objectFit: "cover" }}
-                  alt="Event"
+                  alt="Picture of our donations and outreach"
                   fill
                   quality={100}
                   priority={true}

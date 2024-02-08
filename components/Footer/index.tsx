@@ -14,7 +14,7 @@ const Footer = () => {
               style={{
                 objectFit: "cover",
               }}
-              alt="card-image"
+              alt="Greencal-foundation logo"
               fill
               quality={100}
               priority={true}

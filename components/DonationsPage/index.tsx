@@ -35,7 +35,7 @@ const DonationsPage = () => {
                 <Image
                   src={outreach2}
                   style={{ objectFit: "cover" }}
-                  alt="Event"
+                  alt="Picture of our donations and outreach"
                   fill
                   quality={100}
                   priority={true}

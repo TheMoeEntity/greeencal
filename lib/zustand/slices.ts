@@ -1,10 +1,10 @@
 import { Helpers } from "@/Helpers";
-import { donationType, testimonials } from "@/Helpers/types";
+import { donationType, testimonialsType } from "@/Helpers/types";
 import { DocumentData } from "firebase/firestore";
 import { StateCreator } from "zustand";
 
 export interface TestimonialSlice {
-  testimonials: testimonials[];
+  testimonials: testimonialsType[];
   fetchTestimonials: () => void;
 }
 export interface DonationsSlice {
@@ -19,19 +19,37 @@ const getAllDonations = async () => {
   return donations;
 };
 
-export const createDonationSlice: StateCreator<DonationsSlice> = (set) => ({
+export const createDonationSlice: StateCreator<DonationsSlice> = (
+  set,
+  get
+) => ({
   donations: [],
   fetchDonations: async () => {
-    const res = await Helpers.getData("donations");
-    set({ donations: res as donationType[] });
+    const fetched = get().donations;
+    const res = await Helpers.getData("donations")
+      .then((x) => {
+        fetched.push(x as unknown as donationType);
+        return x;
+      })
+      .catch(() => []);
+    fetched.push(res as unknown as donationType);
+    set({ donations: fetched });
   },
 });
 export const createTestimonialSlice: StateCreator<TestimonialSlice> = (
-  set
+  set,
+  get
 ) => ({
   testimonials: [],
   fetchTestimonials: async () => {
-    const res = await Helpers.getData("testimonials");
-    set({ testimonials: res as testimonials[] });
+    const fetched = get().testimonials;
+    const res = await Helpers.getData("testimonials")
+      .then((x) => {
+        fetched.push(x as unknown as testimonialsType);
+        return x;
+      })
+      .catch(() => []);
+    fetched.push(res as unknown as testimonialsType);
+    set({ testimonials: fetched });
   },
 });

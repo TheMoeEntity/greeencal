@@ -5,7 +5,7 @@ export type nomSingle = {
   nomination: string;
   isWinner?: boolean;
 };
-export type testimonials = {
+export type testimonialsType = {
   img: StaticImageData;
   name: string;
   work: string;

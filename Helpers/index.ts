@@ -5,6 +5,23 @@ import { getDocuments } from "@/lib/firebase";
 
 export class Helpers {
   static customDonations = ["₦40k", "₦100k", "₦30k", "₦60k"];
+  static assets: { title: string; icon: string; text: string }[] = [
+    {
+      title: "Education & Food for Children",
+      icon: "fas fa-book-open",
+      text: "Empowering young minds with knowledge and nourishment for a brighter future.",
+    },
+    {
+      title: "Outreach",
+      icon: "fas fa-hands-helping",
+      text: "Extending a helping hand to communities through impactful outreach initiatives. ",
+    },
+    {
+      title: "Grants and Scholarships",
+      icon: "fas fa-graduation-cap",
+      text: "Fueling dreams with opportunities through grants and scholarships for aspiring minds.",
+    },
+  ];
   static testimonials: testimonials[] = [
     {
       img: outreach,

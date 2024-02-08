@@ -20,7 +20,7 @@ function Hero() {
     <div className={styles.hero}>
       <Image
         src={outreach}
-        alt="Hero Image"
+        alt="Background image of our outreach in Abakaliki, Ebonyi state"
         priority
         fill
         style={{ objectFit: "cover" }}
@@ -72,7 +72,7 @@ function Hero() {
             <Image
               className={`${styles.spinImg}`}
               src={grill}
-              alt="grill"
+              alt="Picture of one of our events"
               priority
               fill
               style={{ objectFit: "cover" }}

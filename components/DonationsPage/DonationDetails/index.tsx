@@ -66,7 +66,7 @@ const DonationsDetails = () => {
               <Image
                 src={outreach2}
                 style={{ objectFit: "cover" }}
-                alt="Event"
+                alt="Picture of selected donation"
                 fill
                 quality={100}
                 priority={true}
