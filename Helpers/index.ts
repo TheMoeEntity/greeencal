@@ -102,9 +102,9 @@ export class Helpers {
       href: "contact",
     },
   ];
-  static getData = async () => {
+  static getData = async (data: string) => {
     try {
-      return await getDocuments();
+      return await getDocuments(data);
     } catch (error) {
       return null;
     }

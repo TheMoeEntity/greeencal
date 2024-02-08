@@ -22,8 +22,8 @@ let firebase_app =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 export const db = getFirestore(firebase_app);
 
-export const getDocuments = async () => {
-  const colRef = collection(db, "testimonials");
+export const getDocuments = async (data: string) => {
+  const colRef = collection(db, data);
   const docsSnap = await getDocs(colRef);
   let arr: DocumentData[] = [];
   docsSnap.forEach((doc) => {

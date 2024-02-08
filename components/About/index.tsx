@@ -1,12 +1,16 @@
+"use client";
+import { donationType } from "@/Helpers/types";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import styles from "../../app/page.module.css";
 import outreach from "../../public/images/card.jpg";
 import outreach2 from "../../public/images/outreach.jpg";
 
-const About = () => {
+const About = ({ donations }: any) => {
+  const router = useRouter();
   const assets: { title: string; icon: string; text: string }[] = [
     {
-      title: "Education & Food for Chidren",
+      title: "Education & Food for Children",
       icon: "fas fa-book-open",
       text: "Empowering young minds with knowledge and nourishment for a brighter future.",
     },
@@ -117,12 +121,12 @@ const About = () => {
           <h2>Help & Donate To Us Now</h2>
         </div>
         <div className={styles.grid}>
-          {[...Array(3)].map((_x, i) => (
+          {donations.map((x: donationType, i: number) => (
             <div key={i}>
               <div className={styles.img}>
-                <div className={styles.tag}>Outreach</div>
+                <div className={styles.tag}>{x.tag}</div>
                 <Image
-                  src={outreach2}
+                  src={"/images" + x.img}
                   style={{ objectFit: "cover" }}
                   alt="Event"
                   fill
@@ -135,15 +139,17 @@ const About = () => {
                 <div className={styles.date}>
                   <span>
                     <i className="fa fa-calendar"></i>
-                    23 May, 2023
+                    {x.date}
                   </span>
                   <span>
                     <i className="fa fa-clock"></i>
-                    10:30 AM
+                    {x.time}
                   </span>
                 </div>
-                <p>Educational Outreach at EBSU primary school</p>
-                <button>DONATE NOW</button>
+                <p>{x.name}</p>
+                <button onClick={() => router.push("/donations/" + x.slug)}>
+                  DONATE NOW
+                </button>
               </div>
             </div>
           ))}

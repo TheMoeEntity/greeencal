@@ -11,6 +11,14 @@ export type testimonials = {
   work: string;
   text: string;
 };
+export type donationType = {
+  img: string;
+  date: string;
+  name: string;
+  tag: string;
+  time: string;
+  slug: string;
+};
 export type nominees = {
   title: string;
   isActive: boolean;
