@@ -11,7 +11,7 @@ const Testimonials = ({ testimonials }: any) => {
   return (
     <div id="testimonials" className={styles.testimonials}>
       <h2>Testimonials</h2>
-      <h1>What {`They’re`} Talking About Us</h1>
+      <h1>What {`They're`} Saying About Us</h1>
       <div className={styles.testimonialsGrid}>
         {testimonials.map((x: testimonials, i: number) => (
           <div key={i}>
