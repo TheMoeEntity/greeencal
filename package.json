@@ -15,7 +15,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-grid-gallery": "^1.0.1-alpha.0",
-    "react-scroll-parallax": "^3.4.5"
+    "react-scroll-parallax": "^3.4.5",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",
