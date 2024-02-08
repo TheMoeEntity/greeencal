@@ -7,7 +7,7 @@ import styles from "../../app/page.module.css";
 import outreach from "../../public/images/card.jpg";
 import outreach2 from "../../public/images/outreach.jpg";
 
-const About = ({ donations }: any) => {
+const About = ({ donations }: { donations: donationType[] }) => {
   const router = useRouter();
 
   return (
@@ -105,7 +105,7 @@ const About = ({ donations }: any) => {
           <h2>Help & Donate To Us Now</h2>
         </div>
         <div className={styles.grid}>
-          {donations.map((x: donationType, i: number) => (
+          {donations.map((x, i) => (
             <div key={i}>
               <div className={styles.img}>
                 <div className={styles.tag}>{x.tag}</div>
