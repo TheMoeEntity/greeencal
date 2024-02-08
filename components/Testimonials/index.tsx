@@ -5,7 +5,7 @@ import styles from "../../app/page.module.css";
 import Image from "next/image";
 import { Gallery } from "react-grid-gallery";
 import { Helpers } from "@/Helpers";
-import { testimonials } from "@/Helpers/types";
+import { testimonialsType } from "@/Helpers/types";
 
 const Testimonials = ({ testimonials }: any) => {
   return (
@@ -13,7 +13,7 @@ const Testimonials = ({ testimonials }: any) => {
       <h2>Testimonials</h2>
       <h1>What {`They're`} Saying About Us</h1>
       <div className={styles.testimonialsGrid}>
-        {testimonials.map((x: testimonials, i: number) => (
+        {testimonials.map((x: testimonialsType, i: number) => (
           <div key={i}>
             <div className={styles.quotes}>
               <i className="fas fa-quote-left"></i>
