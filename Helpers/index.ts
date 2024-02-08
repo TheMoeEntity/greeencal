@@ -1,4 +1,4 @@
-import { linkType, testimonials } from "./types";
+import { linkType, testimonialsType } from "./types";
 import outreach from "../public/images/card.jpg";
 import outreach2 from "../public/images/outreach.jpg";
 import { getDocuments } from "@/lib/firebase";
@@ -22,7 +22,7 @@ export class Helpers {
       text: "Fueling dreams with opportunities through grants and scholarships for aspiring minds.",
     },
   ];
-  static testimonials: testimonials[] = [
+  static testimonials: testimonialsType[] = [
     {
       img: outreach,
       name: "Chijioke Nwankwo",
