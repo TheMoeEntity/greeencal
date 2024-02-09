@@ -1,4 +1,4 @@
-import { usePathname, useRouter } from "next/navigation";
+import { notFound, usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Helpers } from "..";
 import { linkType } from "../types";
@@ -136,4 +136,20 @@ export const useSideBar = () => {
     }, 400);
   };
   return { show, hide, sidebar, sideContent };
+};
+export const useValidRoute = (pathname: string): boolean => {
+  const params = usePathname();
+  const validRoutes: string[] = [
+    "/localhost:3000",
+    "/contact",
+    "/",
+    "/donations",
+    "https://greeencalbeta.vercel.app",
+    "/donations/[id]",
+    "/donations" + params.slice(10, params.length),
+  ];
+  const checkValid = (pathname: string): boolean => {
+    return validRoutes.includes(pathname);
+  };
+  return checkValid(pathname);
 };

@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 99999999999999999;
   transition: 0.7s;
   display: none;
@@ -30,7 +30,7 @@
   padding: 20px 40px;
   color: #00715d;
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -58,7 +58,7 @@
   height: auto;
   font-weight: bold;
   list-style-type: none;
-  border-bottom: 0.2px solid #f1f1f328;
+  border-bottom: 0.2px solid #f1f1f30e;
   display: flex;
   font-size: medium;
   flex-flow: row wrap;
