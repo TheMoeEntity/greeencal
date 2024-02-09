@@ -23,6 +23,7 @@ function Hero() {
         alt="Background image of our outreach in Abakaliki, Ebonyi state"
         priority
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         style={{ objectFit: "cover" }}
       />
       <div className={styles.overlay}></div>
@@ -75,6 +76,7 @@ function Hero() {
               alt="Picture of one of our events"
               priority
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{ objectFit: "cover" }}
             />
           </div>

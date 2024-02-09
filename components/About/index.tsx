@@ -88,13 +88,20 @@ const About = ({ donations }: { donations: donationType[] }) => {
             src={outreach2}
             alt="Kids in the classroom for the hero section"
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             fill
             style={{
               objectFit: "cover",
               transform: "rotate(10deg) translateX(-10px)",
             }}
           />
-          <Image src={outreach} alt="Hero Image" priority fill />
+          <Image
+            src={outreach}
+            alt="Hero Image"
+            priority
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </div>
       <div className={styles.news}>

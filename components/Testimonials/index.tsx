@@ -39,6 +39,7 @@ const Testimonials = ({
                     src={"/images" + x.img}
                     fill
                     style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>
@@ -52,6 +53,7 @@ const Testimonials = ({
                 alt="Greencal foundation company logo"
                 src={greencal}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{ objectFit: "cover" }}
               />
             </div>
