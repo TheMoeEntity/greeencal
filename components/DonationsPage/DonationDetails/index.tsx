@@ -40,7 +40,7 @@ const DonationsDetails = ({
               <form>
                 <div className={styles.formGroup}>
                   <label htmlFor="">Amount</label>
-                  <input type="number" name="" value={50000} />
+                  <input type="number" name="" />
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="">Full Name:</label>
