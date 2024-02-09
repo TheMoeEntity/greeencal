@@ -34,7 +34,7 @@ const Footer = () => {
             <div>
               <i className="fa-solid fa-phone"></i>
             </div>
-            <div>(+234) 807 548 9362, (+880) 155 69569 366</div>
+            <div>(+234)807-548-9362 </div>
           </div>
           <div className={styles.calIcons}>
             <div style={{ width: "50px" }}>
