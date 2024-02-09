@@ -1,11 +1,13 @@
+/* /////FOOOTER SECTION ----------------------------- */
+
 .footer {
   width: 100%;
   height: auto;
   background-image: url("/images/footer-bg.jpeg");
-  /* background-color: #010d12; */
   background-size: cover;
   background-position: center;
   padding: 40px 60px;
+  /* background: linear-gradient(90deg, #E5FAF1, #63d7a6); */
   color: white;
   position: relative;
 }
@@ -16,57 +18,53 @@
   display: flex;
   flex-flow: row wrap;
 }
+.icons i {
+  font-size: 24px;
+}
+.calIcons {
+  font-size: 17px !important;
+}
 .grid > div {
   flex: 20%;
   margin: 10px 14px;
 }
 .grid > div h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 .grid > div:nth-child(2) > div {
   display: flex;
-  margin: 50px 10px;
-  font-size: 14px;
+  margin: 32px 10px;
+  font-size: 15px;
 }
 .grid > div:nth-child(2) {
   flex-grow: 3;
 }
 .icons {
   width: 55%;
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 .grid > div:nth-child(2) > div > div:nth-child(1) {
   width: 35px;
-  height: 35px;
+  height: 30px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 18px;
   overflow: hidden;
-  font-size: 30px;
-  color: #a2ca62;
 }
-.grid
-  > div:nth-child(2)
-  > div
-  > div:nth-child(1)
-  i
-  .grid
-  > div:nth-child(2)
-  > div
-  > div:nth-child(2) {
+.grid > div:nth-child(2) > div > div:nth-child(2) {
   line-height: 1.6;
 }
-.grid > div:nth-child(3) > div {
+.grid > div:nth-child(3) > div,
+.grid > div:nth-child(4) > div {
   margin: 35px 0;
   cursor: pointer;
+  font-size: 15px;
 }
-.grid > div:nth-child(3) > div i {
+.grid > div:nth-child(3) > div i,
+.grid > div:nth-child(4) > div i {
   margin-right: 13px;
-  color: #a2ca62;
+  color: #00b960;
 }
 .grid > div:nth-child(1) p {
   width: 100%;
@@ -78,8 +76,9 @@
 .logo {
   width: 235.8px;
   height: 44px;
-  width: 160.77px;
-  height: 30px;
+  width: 205px;
+  height: 205px;
+  /* background-color: orange; */
   position: relative;
 }
 .logo img {
@@ -108,7 +107,7 @@
 .grid > div:last-child form button {
   width: 100%;
   height: 65px;
-  background-color: #a2ca62;
+  background-color: #ffb703;
   font-weight: bold;
   border: none;
   font-size: 17px;
@@ -120,9 +119,10 @@
   height: 67.2px;
   background: rgba(51, 51, 51, 0.4);
   display: flex;
+  color: #00b960;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  justify-content: center;
+  padding: 0 30px;
 }
 .copyright > div {
   width: fit-content;
@@ -139,17 +139,38 @@
 }
 .copyright > div ul li i {
   margin: 0 12px;
-  color: #a2ca62;
+  color: #ffb703;
   font-size: 8px;
 }
-.credits {
-  font-size: small;
-  text-align: center;
-  padding-top: 30px;
+@media screen and (max-width: 1200px) {
+  .grid {
+    justify-content: center;
+  }
 }
-.credits a {
-  color: #a2ca62;
-  cursor: pointer;
+@media screen and (max-width: 400px) {
+  .footer {
+    padding: 40px 15px !important;
+  }
+  .grid > div:nth-child(2) > div > div:nth-child(1) {
+    height: 50px !important;
+    width: 50px !important;
+    transform: scale(0.85);
+  }
+}
+@media screen and (max-width: 560px) {
+  .logo {
+    width: 160px;
+    height: 160px;
+  }
+  .footer {
+    padding: 40px 30px !important;
+  }
+  .copyright {
+    padding: 20px 40px !important;
+  }
+  .copyright ul li {
+    margin: 5px 10px;
+  }
 }
 @media screen and (max-width: 920px) {
   .grid {
@@ -190,32 +211,5 @@
     order: 2;
     margin-top: 20px;
     font-weight: bold;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .footer {
-    padding: 40px 30px !important;
-  }
-  .copyright {
-    padding: 20px 40px !important;
-  }
-  .copyright ul li {
-    margin: 5px 10px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .footer {
-    padding: 40px 15px !important;
-  }
-  .grid > div:nth-child(2) > div > div:nth-child(1) {
-    height: 50px !important;
-    width: 50px !important;
-    transform: scale(0.85);
-  }
-  .credits {
-    margin-top: 60px;
-    display: none;
   }
 }
