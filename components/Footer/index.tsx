@@ -113,7 +113,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.credits}>
+      {/* <div className={styles.credits}>
         <p>
           Designed and developed by{" "}
           <a
@@ -125,7 +125,7 @@ const Footer = () => {
           </a>
           - Freelance Web Developer
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
