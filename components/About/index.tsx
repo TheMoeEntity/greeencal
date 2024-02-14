@@ -43,7 +43,7 @@ const About = ({ donations }: { donations: donationType[] }) => {
             outreach, and scholarships, we strive to create a brighter future
             for children, fostering a community of empowerment and growth.
           </p>
-          <div className={styles.aboutList}>
+          {/* <div className={styles.aboutList}>
             <div>
               <div>
                 <i className="fas fa-donate"></i>
@@ -77,7 +77,7 @@ const About = ({ donations }: { donations: donationType[] }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className={styles.readmore}>
             <button>Read More</button>
           </div>
@@ -107,9 +107,9 @@ const About = ({ donations }: { donations: donationType[] }) => {
       <div className={styles.news}>
         <div className={styles.title}>
           <h3>
-            <b>We Love To Help Poor</b>
+            <b>Your Donations help determine the fate of children</b>
           </h3>
-          <h2>Help & Donate To Us Now</h2>
+          <h2>How to get involved</h2>
         </div>
         <div className={styles.grid}>
           {donations.map((x, i) => (

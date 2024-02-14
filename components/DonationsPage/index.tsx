@@ -25,10 +25,10 @@ const DonationsPage = ({ donations }: { donations: donationType[] }) => {
       </div>
       <div className={styles.news}>
         <div className={styles.title}>
-          <h3>
+          {/* <h3>
             <b>We Love To Help Poor</b>
-          </h3>
-          <h2>Help & Donate To Us Now</h2>
+          </h3> */}
+          <h2>Your Donations help determine the fate of children</h2>
         </div>
         <div className={styles.grid}>
           {donations.map((x, i) => (

@@ -94,14 +94,14 @@ export class Helpers {
       href: "",
     },
     {
-      name: "About",
-      isActive: false,
-      href: "#about",
-    },
-    {
       name: "Services",
       isActive: false,
       href: "#services",
+    },
+    {
+      name: "About",
+      isActive: false,
+      href: "#about",
     },
     {
       name: "Testimonials",
